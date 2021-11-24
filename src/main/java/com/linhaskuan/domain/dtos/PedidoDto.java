@@ -16,12 +16,8 @@ public class PedidoDto implements Serializable {
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataPedido = LocalDate.now();
 
-	protected String status;
 	protected String descricao;
 	protected String endereco;
-	protected String cep;
-	protected String cidade;
-	protected String rg;
 	protected String celular;
 	protected BigDecimal valor;
 
@@ -53,14 +49,6 @@ public class PedidoDto implements Serializable {
 		this.dataPedido = dataPedido;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public String getDescricao() {
 		return descricao;
 	}
@@ -75,30 +63,6 @@ public class PedidoDto implements Serializable {
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getRg() {
-		return rg;
-	}
-
-	public void setRg(String rg) {
-		this.rg = rg;
 	}
 
 	public String getCelular() {
@@ -122,12 +86,8 @@ public class PedidoDto implements Serializable {
 		this.id = pedido.getId();
 		this.nomeCliente = pedido.getNomeCliente();
 		this.dataPedido = pedido.getDataPedido();
-		this.status = pedido.getStatus();
 		this.descricao = pedido.getDescricao();
 		this.endereco = pedido.getEndereco();
-		this.cep = pedido.getCep();
-		this.cidade = pedido.getCidade();
-		this.rg = pedido.getRg();
 		this.celular = pedido.getCelular();
 		this.valor = pedido.getValor();
 	}
